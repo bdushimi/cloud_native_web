@@ -1,9 +1,8 @@
 # Monorepo Template
 
 A minimal monorepo template with:
-
-- [Lerna](https://lerna.js.org/)
-- [TypeScript](http://www.typescriptlang.org/)
+* [Lerna](https://lerna.js.org/)
+* [TypeScript](http://www.typescriptlang.org/)
 
 ## Install dependencies
 

@@ -14,15 +14,10 @@ module.exports = (plop) => {
         type: "list",
         name: "serviceType",
         message: "Please choose a service",
-        choices: fs
-          .readdirSync("./templates/services")
-          .map((serviceFolderName) => ({
-            name: serviceFolderName
-              .split("-")
-              .map((word) => word.charAt(0).toUpperCase() + word.substring(1))
-              .join(" "),
-            value: serviceFolderName,
-          })),
+        choices: fs.readdirSync("./templates/services").map(serviceFolderName => ({
+          name: serviceFolderName.split("-").map(word => word.charAt(0).toUpperCase() + word.substring(1)).join(" "),
+          value: serviceFolderName,
+        })),
       },
       {
         type: "input",
