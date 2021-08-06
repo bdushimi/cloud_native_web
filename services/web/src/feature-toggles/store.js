@@ -15,4 +15,4 @@ const createStore = () => {
 }   
 
 
-export const featureToggleStore = createStore()
+export const featureTogglesStore = createStore()
