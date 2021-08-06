@@ -2,7 +2,8 @@
 	import FeatureToggle from "../components/feature-toggle.svelte";
 	import { FEATURE_TOGGLES } from "../feature-toggles";
   </script>
-  
+
+
 <svelte:head>
 	<title>About</title>
 </svelte:head>
