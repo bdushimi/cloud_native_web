@@ -7,11 +7,6 @@
     "generate": "plop --plopfile ./generators/index.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "husky": {
-    "hooks": {
-      "pre-commit": "pretty-quick --staged"
-    }
-  },
   "repository": {
     "type": "git",
     "url": "git@gitlab.com:mikenikles/monorepo-template.git"
