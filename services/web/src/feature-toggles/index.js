@@ -1,4 +1,4 @@
-import { featureToggleStore} from "./store"
+import { featureTogglesStore} from "./store"
 
 
 
