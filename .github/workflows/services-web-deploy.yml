@@ -1,0 +1,21 @@
+on: # start of an 'on' event configuration
+  push: # start of 'push' event configuration
+    branches: # definition of the branches that must be monitored for 'push' event
+      - master
+    paths: # definition of the paths in the repository to monitor and run the workflow in case of any changes.
+      - 'services/web/**'
+
+jobs: # start of 'jobs' configuration
+  deploy: # start of 'deploy' job configuration
+    runs-on: ubuntu-latest # definition of the OS on which these commands will execute.
+    steps: # definition of steps to follow in this job
+      - uses: actions/checkout@v2 # it checks-out your repository so that this workflow could access it
+      - name: Install dependencies
+        run: npm install
+      - name: Bootstrap all services
+        run: npm run bootstrap
+      - name: Deploy the web service
+        run: npm run deploy --prefix services/web
+        env: # definition of environment variables that this workflow needs to run
+          FIREBASE_TOKEN: ${{ secrets.FIREBASE_TOKEN }}
+## GitHub's secret token for Firebase to authenticate to Firebase for continuous deployment.
