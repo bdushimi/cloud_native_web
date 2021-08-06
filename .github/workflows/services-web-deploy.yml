@@ -2,7 +2,6 @@ on: # start of an 'on' event configuration
   push: # start of 'push' event configuration
     branches: # definition of the branches that must be monitored for 'push' event
       - master
-      - add-deployment-github-action
 
 jobs: # start of 'jobs' configuration
   deploy: # start of 'deploy' job configuration
