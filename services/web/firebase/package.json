@@ -6,7 +6,8 @@
   "scripts": {
     "dev": "firebase serve",
     "firebase:login": "firebase login --no-localhost",
-    "deploy": "firebase deploy"
+    "deploy": "firebase deploy",
+    "firebase:version": "firebase --version"
   },
   "author": "@bdushimi",
   "license": "ISC",
