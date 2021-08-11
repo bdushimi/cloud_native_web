@@ -23,6 +23,6 @@ Object.keys(FEATURE_TOGGLES).forEach((toggleKey) => {
   export const initFeatureToggles = async () => {
     const remoteConfig = window.firebase.remoteConfig();
     await remoteConfig.fetchAndActivate();
-    setFeatureTogglesStore(remoteConfig.getAll())
+    setFeatureTogglesStore(remoteConfig.getAll());
     return remoteConfig;
   };

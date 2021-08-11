@@ -23,7 +23,7 @@
 
 <h1>Recent posts</h1>
 
-<ul>
+<ul data-cy="blog-posts-list">
 	{#each posts as post}
 		<!-- we're using the non-standard `rel=prefetch` attribute to
 				tell Sapper to load the data for the page as soon as
