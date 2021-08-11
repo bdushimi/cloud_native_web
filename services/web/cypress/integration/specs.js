@@ -1,4 +1,4 @@
-const posts = require('../../src/routes/blog/_posts');
+import posts from "../../src/routes/blog/_posts";
 
 describe("Sapper template app", () => {
   beforeEach(() => {
@@ -8,6 +8,13 @@ describe("Sapper template app", () => {
   it("has the correct <h1>", () => {
     cy.contains("h1", "Great success!");
   });
+
+  // 'it' is used to specify the context and execution of the test
+  it("has the correct heading", () => {
+    // Finds elements with the given role name and matches the value to the element in the should function.
+    cy.findByRole("heading").should("contain", "Great success!");
+  });
+  
 
   it("navigates to /about", () => {
     cy.get("nav a").contains("about").click();
